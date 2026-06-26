@@ -94,7 +94,7 @@ For development and testing with the default, pre-built syslog configuration:
 1. **Clone and configure:**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/burnerforge/syslog-ng.git
    cd syslog
    cp .env.example .env
    # Edit .env with your SentinelOne token(s)
@@ -103,7 +103,7 @@ For development and testing with the default, pre-built syslog configuration:
 2. **Start with pre-built image:**
 
    ```bash
-   docker compose up -d
+   docker compose up -d --build
    ```
 
 ### Production Deployment (Recommended)
@@ -126,23 +126,9 @@ For production use with customized syslog-ng configuration:
 
 3. **Test syslog reception:**
 
-   To test that the service is receiving logs, you can send sample messages to the exposed UDP port. The following commands use a temporary `alpine-nc` container to send the data, ensuring the tool is available.
-
    ```bash
-   # Test with a sample Linux log
-   echo "<134>$(date '+%b %d %H:%M:%S') ubuntu-server sshd[12345]: Accepted publickey for admin" | \
-     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
-     /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
-
-   # Test with the sample FortiGate log
-   cat samples/fortigate-sample.log | \
-     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
-     /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
-
-   # Test with the sample ZScaler log
-   cat samples/zscaler-sample.log | \
-     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
-     /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
+   # Test nc (Netcat)
+   echo "<134>$(date '+%b %d %H:%M:%S') ubuntu-server sshd[12345]: Accepted publickey for admin" | nc -u -w 1 127.0.0.1 5514
    ```
 
 4. **View logs:**
