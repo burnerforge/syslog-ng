@@ -95,7 +95,7 @@ For development and testing with the default, pre-built syslog configuration:
 
    ```bash
    git clone https://github.com/burnerforge/syslog-ng.git
-   cd syslog
+   cd syslog-ng
    cp .env.example .env
    # Edit .env with your SentinelOne token(s)
    ```
