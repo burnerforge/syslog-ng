@@ -121,7 +121,7 @@ For production use with customized syslog-ng configuration:
 
    ```bash
    # Uses local build + custom config mounting
-   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
    ```
 
 3. **Test syslog reception:**
