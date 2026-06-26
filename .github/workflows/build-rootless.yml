@@ -20,7 +20,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: sva-s1/syslog
+  IMAGE_NAME: ${{ github.repository_owner }}/syslog
 
 jobs:
   build-and-test:
@@ -102,7 +102,7 @@ jobs:
         id: meta-nc
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/sva-s1/alpine-nc
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/alpine-nc
           tags: |
             type=ref,event=branch
             type=ref,event=pr

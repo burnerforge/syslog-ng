@@ -1,5 +1,5 @@
 FROM --platform=$BUILDPLATFORM balabit/syslog-ng:4.9.0
-LABEL oorg.opencontainers.image.source = "https://github.com/sva-s1/sentinelone-syslog-toolkit"
+LABEL org.opencontainers.image.source="https://github.com/sentinelone/sentinelone-syslog-toolkit"
 
 RUN set -eux; \
     apt-get update; \

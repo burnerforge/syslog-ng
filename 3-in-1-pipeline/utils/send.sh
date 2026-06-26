@@ -42,7 +42,7 @@ send_log() {
     
     # Send the message with detailed error handling
     echo "🚀 Sending via netcat to localhost:514..."
-    if echo "$LOG_CONTENT" | docker run -i --rm --network host ghcr.io/sva-s1/alpine-nc:latest /bin/ash -c "nc -u -w 1 127.0.0.1 514"; then
+    if echo "$LOG_CONTENT" | docker run -i --rm --network host ${ALPINE_NC_IMAGE:-ghcr.io/sentinelone/alpine-nc}:latest /bin/ash -c "nc -u -w 1 127.0.0.1 514"; then
         echo "✅ $description sent successfully via netcat"
         
         # Wait a moment for syslog-ng to process

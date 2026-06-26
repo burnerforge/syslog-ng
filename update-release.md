@@ -1,9 +1,10 @@
 # Manual Release Update Guide
 
-To update the existing v1.1.7 release to emphasize container images:
+To manually update a GitHub release to emphasize container images:
 
-## 1. Go to GitHub Release Page
-https://github.com/sva-s1/sentinelone-syslog-toolkit/releases/tag/v1.1.7
+## 1. Go to your GitHub Release Page
+
+Navigate to your repository's releases and click on the release you want to update.
 
 ## 2. Click "Edit Release"
 
@@ -24,7 +25,7 @@ https://github.com/sva-s1/sentinelone-syslog-toolkit/releases/tag/v1.1.7
 
 ### Quick Start
 ```bash
-git clone https://github.com/sva-s1/sentinelone-syslog-toolkit.git
+git clone <your-repo-url>
 cd sentinelone-syslog-toolkit
 bash setup.sh
 ```
@@ -33,21 +34,14 @@ bash setup.sh
 
 ### Rootless Syslog-NG Container
 ```bash
-docker pull ghcr.io/sva-s1/syslog:v1.1.7
-docker pull ghcr.io/sva-s1/syslog:latest
+docker pull ghcr.io/YOUR_ORG/syslog:v1.1.7
+docker pull ghcr.io/YOUR_ORG/syslog:latest
 ```
-**Package:** [📦 sva-s1/syslog](https://github.com/sva-s1/sentinelone-syslog-toolkit/pkgs/container/syslog)
 
 ### Alpine NetCat Utility
 ```bash
-docker pull ghcr.io/sva-s1/alpine-nc:latest
+docker pull ghcr.io/YOUR_ORG/alpine-nc:latest
 ```
-**Package:** [📦 sva-s1/alpine-nc](https://github.com/sva-s1/sentinelone-syslog-toolkit/pkgs/container/alpine-nc)
-
-### 🔄 Migration Notice
-**Previous container locations deprecated:**
-- Old: `ghcr.io/sva-s1/syslog` (from sva-s1/syslog repo) 
-- New: `ghcr.io/sva-s1/syslog` (from sva-s1/sentinelone-syslog-toolkit repo)
 
 ---
 
@@ -60,5 +54,3 @@ For detailed setup instructions, see the README.md in each solution directory.
 ```
 
 ## 4. Save the updated release
-
-This will make the container images much more prominent and explain that the zip files are just auto-generated artifacts.

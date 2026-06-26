@@ -63,7 +63,7 @@ logger -T 601 -n 127.0.0.1 -p user.info "$(cat palo-alto.log)"
 ### Using Docker (Alpine NC)
 ```bash
 # For rootless-syslog-ng (port 5514)
-cat zscaler-sample.log | docker run -i --rm --network host ghcr.io/sva-s1/alpine-nc:latest /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
+cat zscaler-sample.log | docker run -i --rm --network host ${ALPINE_NC_IMAGE:-ghcr.io/sentinelone/alpine-nc}:latest /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
 ```
 
 ## Adding Your Own Samples

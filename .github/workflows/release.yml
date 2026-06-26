@@ -61,7 +61,7 @@ jobs:
 
             ### Quick Start
             ```bash
-            git clone https://github.com/sva-s1/sentinelone-syslog-toolkit.git
+            git clone <your-repo-url>
             cd sentinelone-syslog-toolkit
             bash setup.sh
             ```
@@ -70,21 +70,14 @@ jobs:
 
             ### Rootless Syslog-NG Container
             ```bash
-            docker pull ghcr.io/sva-s1/syslog:${{ github.ref_name }}
-            docker pull ghcr.io/sva-s1/syslog:latest
+            docker pull ghcr.io/${{ github.repository_owner }}/syslog:${{ github.ref_name }}
+            docker pull ghcr.io/${{ github.repository_owner }}/syslog:latest
             ```
-            **Package:** [📦 sva-s1/syslog](https://github.com/sva-s1/sentinelone-syslog-toolkit/pkgs/container/syslog)
 
             ### Alpine NetCat Utility
             ```bash
-            docker pull ghcr.io/sva-s1/alpine-nc:latest
+            docker pull ghcr.io/${{ github.repository_owner }}/alpine-nc:latest
             ```
-            **Package:** [📦 sva-s1/alpine-nc](https://github.com/sva-s1/sentinelone-syslog-toolkit/pkgs/container/alpine-nc)
-
-            ### 🔄 Migration Notice
-            **Previous container locations deprecated:**
-            - Old: `ghcr.io/sva-s1/syslog` (from sva-s1/syslog repo) 
-            - New: `ghcr.io/sva-s1/syslog` (from sva-s1/sentinelone-syslog-toolkit repo)
 
             ---
 
@@ -130,6 +123,6 @@ jobs:
           file: ./rootless-syslog-ng/Dockerfiles/syslog-ng-rootless/Dockerfile
           push: true
           tags: |
-            ghcr.io/sva-s1/syslog:${{ steps.version.outputs.version }}
-            ghcr.io/sva-s1/syslog:latest
+            ghcr.io/${{ github.repository_owner }}/syslog:${{ steps.version.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/syslog:latest
           platforms: linux/amd64

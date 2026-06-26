@@ -26,10 +26,10 @@ This is a fork of the [original SentinelOne Collector](https://community.sentine
 
 ### Choose Your Collector:
 
-- **Single syslog source or unique port per source?** → Use the [vanilla S1 Collector](https://github.com/sva-s1/s1-collector-syslog) (no syslog-ng, straight Linux/Docker)
+- **Single syslog source or unique port per source?** → Use the vanilla S1 Collector (no syslog-ng, straight Linux/Docker)
 - **Multiple sources on same port with log differentiation?** → **Use this project!** 🚀
-- **Want to test addEvents API before installing anything?** → Try the [addEvents testing project](https://github.com/sva-s1/addEvents)
-- **Need raw log samples for testing and security research?** → Check out the [Log Zoo](https://github.com/sva-s1/log-zoo)!
+- **Want to test addEvents API before installing anything?** → Refer to SentinelOne community documentation
+- **Need raw log samples for testing and security research?** → See the `shared/samples/` directory in this repo
 
 > [!TIP]
 > ⭐ **STAR this repo** if you find it useful!
@@ -47,8 +47,8 @@ This is a fork of the [original SentinelOne Collector](https://community.sentine
 
 ### Step 1: Clone Repository
 ```bash
-git clone https://github.com/sva-s1/syslog-collector
-cd syslog-collector
+git clone <your-repo-url>
+cd sentinelone-syslog-toolkit/3-in-1-pipeline
 ```
 
 ### Step 2: Configure Environment

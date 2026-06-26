@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-932218.svg?style=for-the-badge)](LICENSE)
 [![Syslog](https://img.shields.io/badge/Syslog-RFC3164%20%26%20RFC5424-f6c444?style=for-the-badge)](https://tools.ietf.org/html/rfc5424)
 
-**Version:** [1.1.6](VERSION) | **Status:** TESTING | **Last Updated:** 2025-08-15 | **Docker Image:** [ghcr.io/sva-s1/syslog](https://github.com/sva-s1/syslog/pkgs/container/syslog) 
+**Version:** [1.1.6](VERSION) | **Status:** TESTING | **Last Updated:** 2025-08-15 | 
 
 ## Overview
 
@@ -94,7 +94,7 @@ For development and testing with the default, pre-built syslog configuration:
 1. **Clone and configure:**
 
    ```bash
-   git clone https://github.com/sva-s1/syslog.git
+   git clone <your-repo-url>
    cd syslog
    cp .env.example .env
    # Edit .env with your SentinelOne token(s)
@@ -131,17 +131,17 @@ For production use with customized syslog-ng configuration:
    ```bash
    # Test with a sample Linux log
    echo "<134>$(date '+%b %d %H:%M:%S') ubuntu-server sshd[12345]: Accepted publickey for admin" | \
-     docker run -i --rm --network host ghcr.io/sva-s1/alpine-nc:latest \
+     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
      /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
 
    # Test with the sample FortiGate log
    cat samples/fortigate-sample.log | \
-     docker run -i --rm --network host ghcr.io/sva-s1/alpine-nc:latest \
+     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
      /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
 
    # Test with the sample ZScaler log
    cat samples/zscaler-sample.log | \
-     docker run -i --rm --network host ghcr.io/sva-s1/alpine-nc:latest \
+     docker run -i --rm --network host ghcr.io/$GITHUB_USER/alpine-nc:latest \
      /bin/ash -c "nc -u -w 1 127.0.0.1 5514"
    ```
 

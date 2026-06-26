@@ -1,7 +1,7 @@
 # Install the SentinelOne Collector on Docker with Syslog
 
 > Quick-Start Guide for a Single Source  
-> (Note: Support for multiple sources on the same port can be found here: https://github.com/sva-s1/syslog-collector)
+> (Note: Support for multiple sources on the same port can be found in the `3-in-1-pipeline/` directory of this repo)
 
 ![SyslogPipe-Dockerized-S1-Collector.png](src/assets/images/SyslogPipe-Dockerized-S1-Collector.png)
 
@@ -77,14 +77,14 @@ First, you need to get the project files onto your machine.
 
 You can either:
 
-- **Download the ZIP file:** Go to the GitHub repository [https://github.com/sva-s1/sentinelone-syslog-toolkit](https://github.com/sva-s1/sentinelone-syslog-toolkit) and click the green "Code" button, then "Download ZIP". Unzip the file to a location on your computer.
+- **Download the ZIP file:** Go to the GitHub repository and click the green "Code" button, then "Download ZIP". Unzip the file to a location on your computer.
 
 > [!NOTE]
 > This repo is undergoing changnes, I just updated the clone reference which grabs the entire project but you only need the simple-collector folder portion; eventually, I pull these apart so that won't be needed.
 
 - **Use Git Clone (if you have Git installed):**
   ```bash
-  git clone --no-checkout --depth 1 https://github.com/sva-s1/sentinelone-syslog-toolkit
+  git clone --no-checkout --depth 1 <your-repo-url>
   cd sentinelone-syslog-toolkit
 
   # 2. Tell Git to only track that specific folder

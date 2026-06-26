@@ -6,7 +6,7 @@
 cd /etc
 sudo mkdir sentinelone-syslog-toolkit
 sudo chown $USER:$GROUP sentinelone-syslog-toolkit
-git clone https://github.com/sva-s1/sentinelone-syslog-toolkit.git
+git clone <your-repo-url>
 cd sentinelone-syslog-toolkit
 bash setup.sh
 ```
