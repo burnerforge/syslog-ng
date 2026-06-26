@@ -17,24 +17,10 @@ This document defines the standardized environment variable naming across all so
 - **Format:** `https://xdr.us1.sentinelone.net` or `https://ingest.us1.sentinelone.net` (HEC only)
 - **Usage:** Target endpoint for log forwarding
 
-## Solution-Specific Variables
-
-### Simple Collector
-- `SIMPLE_UDP_PORT=514` - UDP syslog port
-- `SIMPLE_TCP_PORT=601` - TCP syslog port  
-- `SIMPLE_PARSER=marketplace-paloaltonetworksfirewall-latest` - Default parser
-
-### 3-in-1 Pipeline
-- `PORT1_PROTOCOL=udp` - First port protocol
-- `PORT1_NUMBER=514` - First port number
-- `PORT2_PROTOCOL=tls` - Second port protocol (TLS)
-- `PORT2_NUMBER=6514` - Second port number
-- `SOURCE1_NAME=cisco-router` - Source identifier
-- `SOURCE1_PARSER=ciscoRouter1` - Parser for source
-- `SOURCE1_MATCHER=router*` - Content matching pattern
-
 ### Rootless Syslog-NG
-- `ROOTLESS_PORT=5514` - Syslog listening port (rootless-friendly)
+- `ROOTLESS_PORT=5514` - Syslog listening port1
+- `ROOTLESS_PORT=514` - Syslog listening port2
+- `ROOTLESS_PORT=6514` - Syslog listening port3
 - `USER_ID=1000` - Container user ID
 - `GROUP_ID=1000` - Container group ID
 
