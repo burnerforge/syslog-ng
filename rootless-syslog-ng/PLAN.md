@@ -52,12 +52,6 @@ A production-ready, containerized service that receives traditional syslog messa
    - Query SentinelOne API to confirm log ingestion
    - Verify correct parser assignment via `sourcetype`
 
-## Future Enhancements
-- Add support for additional log sources
-- Implement configurable log filtering and transformation
-- Add Prometheus metrics endpoint
-- Create Kubernetes deployment manifests
-- Implement log rotation and retention policies
 
 ---
-*Last Updated: 2025-08-04 - Production Release*
+*Last Updated: 2026-06-26 - Production Release*
