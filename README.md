@@ -53,12 +53,4 @@ bash setup.sh
 
 This ensures proper SSL/TLS connectivity to SentinelOne SDL.
 
-## 🚧 Future Roadmap
-
-* **Native Linux deployments** for customers who cannot use containers (`coming-soon/native-linux/`)
-* **Enterprise offline solutions** for environments without access to public repos (`coming-soon/enterprise-offline/`)
-* **Additional log source integrations** based on customer feedback
-
 ---
-
-_Built with ❤️ for secure, scalable log forwarding to SentinelOne SDL_
