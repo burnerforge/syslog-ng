@@ -111,7 +111,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Security scanners and linting
+# Security scanners and lintings
 .trivy/
 .hadolint/
 .shellcheck/
