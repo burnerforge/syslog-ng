@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-932218.svg?style=for-the-badge)](LICENSE)
 [![Syslog](https://img.shields.io/badge/Syslog-RFC3164%20%26%20RFC5424-f6c444?style=for-the-badge)](https://tools.ietf.org/html/rfc5424)
 
-**Version:** [1.1.6](VERSION) | **Status:** TESTING | **Last Updated:** 2025-08-15 | 
+**Version:** [1.1](VERSION) | **Status:** TESTING | **Last Updated:** 2026-06-25 | 
 
 ## Overview
 
