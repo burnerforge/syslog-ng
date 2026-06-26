@@ -5,6 +5,7 @@
 **Quick Start:**
 
 ` ` `bash
+
 cd /etc
 sudo mkdir sentinelone
 sudo chown $USER:$GROUP sentinelone-syslog-toolkit
@@ -12,6 +13,7 @@ git clone https://github.com/burnerforge/syslog-ng.git
 cd sentinelone
 bash setup.sh
 ` ` `
+
 *(Note: Remove spaces between the backticks above when pasting into your markdown editor)*
 
 **Target Audience:**
