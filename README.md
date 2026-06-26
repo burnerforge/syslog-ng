@@ -8,7 +8,7 @@
 cd /etc
 sudo mkdir sentinelone
 cd sentinelone
-sudo chown $USER:$GROUP sentinelone-syslog-toolkit
+sudo chown $USER:$GROUP sentinelone
 git clone https://github.com/burnerforge/syslog-ng.git
 cd syslog-ng
 bash setup.sh
