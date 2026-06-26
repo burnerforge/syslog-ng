@@ -7,9 +7,10 @@
 ```bash
 cd /etc
 sudo mkdir sentinelone
+cd sentinelone
 sudo chown $USER:$GROUP sentinelone-syslog-toolkit
 git clone https://github.com/burnerforge/syslog-ng.git
-cd sentinelone
+cd syslog-ng
 bash setup.sh
 ```
 
