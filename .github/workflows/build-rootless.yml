@@ -59,7 +59,7 @@ jobs:
           driver-opts: network=host
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ./rootless-syslog-ng
           file: ./rootless-syslog-ng/Dockerfiles/syslog-ng-rootless/Dockerfile
@@ -111,7 +111,7 @@ jobs:
             latest=false
 
       - name: Build and push alpine-nc image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ./rootless-syslog-ng
           file: ./rootless-syslog-ng/Dockerfiles/alpine-nc/Dockerfile
